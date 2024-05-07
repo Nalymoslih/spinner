@@ -1,40 +1,30 @@
-name: CI
-on: [push]
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Begin CI...
-        uses: actions/checkout@v2
-
-      - name: Use Node 12
-        uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12.x
+          node-version: 20
+      - run: npm ci
 
-      - name: Use cached node_modules
-        uses: actions/cache@v1
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          path: node_modules
-          key: nodeModules-${{ hashFiles('**/package.lock') }}
-          restore-keys: |
-            nodeModules-
-
-      - name: Install dependencies
-        run: npm install --frozen-lockfile
-        env:
-          CI: true
-
-
-  
-
-      - name: Build
-        run: npm run build
-        env:
-          CI: true
-
-      - name: Semantic Release
-        run: npm run semantic-release
-        env:
-          CI: true
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+      - run: npm ci
+      - run: npm publish
