@@ -94,8 +94,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "publishConfig": {
-    "@Nalymoslih:registry": "https://npm.pkg.github.com/"
-} 
+  }
 }
