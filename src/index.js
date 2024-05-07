@@ -1,5 +1,11 @@
 import React, {useRef, useState} from 'react';
-import {View, TouchableOpacity, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+} from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
 import Spinner from './Spinner';
 import Sizing from './Sizing';
@@ -32,7 +38,7 @@ const SpinWheel = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <TouchableOpacity onPress={spin}>
         <View style={styles.imageContainer}>
           <Image
@@ -103,16 +109,16 @@ const SpinWheel = () => {
           onClose={closeModal}
         />
       }
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#800080aa',
+    height: Sizing.deviceHeight,
   },
   imageContainer: {
     width: Sizing.deviceWidth * 0.767,
