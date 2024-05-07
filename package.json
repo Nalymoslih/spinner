@@ -90,6 +90,9 @@
     "node_modules/",
     "lib/"
   ],
+  "publishConfig": {
+    "@Nalymoslih:registry": "https://npm.pkg.github.com"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
