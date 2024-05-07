@@ -1,9 +1,9 @@
 import React, {useRef, useState} from 'react';
 import {View, TouchableOpacity, StyleSheet, Image} from 'react-native';
 import ConfettiCannon from 'react-native-confetti-cannon';
-import Spinner from './components/Spinner';
-import Sizing from './components/Sizing';
-import WinnerModal from './components/WinnerModal';
+import Spinner from './Spinner';
+import Sizing from './Sizing';
+import WinnerModal from './WinnerModal';
 
 const SpinWheel = () => {
   const [showConfetti, setShowConfetti] = useState(false);
