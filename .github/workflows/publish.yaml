@@ -26,10 +26,6 @@ jobs:
         env:
           CI: true
 
-      - name: Lint
-        run: npm run lint
-        env:
-          CI: true
 
       - name: Test
         run: npm run test --ci --coverage --maxWorkers=2
