@@ -1,8 +1,8 @@
 version: 2
 jobs:
-  test_node_10:
+  test_node_20:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:20
     steps:
       - checkout
       - run: yarn install --frozen-lockfile
@@ -10,7 +10,7 @@ jobs:
 
   release:
     docker:
-      - image: circleci/node:10
+      - image: circleci/node:20
     steps:
       - checkout
       - run: yarn install --frozen-lockfile
@@ -23,7 +23,7 @@ workflows:
   test_and_release:
     # Run the test jobs first, then the release only when all the test jobs are successful
     jobs:
-      - test_node_10
+      - test_node_20
       - release:
           filters:
             branches:
@@ -31,4 +31,4 @@ workflows:
                 - master
                 - beta
           requires:
-            - test_node_10
+            - test_node_20
