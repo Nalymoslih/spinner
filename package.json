@@ -12,11 +12,24 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+  "release": {
+    "prepare": [
+       "@semantic-release/changelog",
+       "@semantic-release/npm",
+       {
+        "path": "@semantic-release/git",
+         "assets": [
+
+          "dist/**/*.{js,ts}",
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]nn${nextRelease.notes}"
+      }
+    ]
   },
+ 
   "dependencies": {
     "@react-native-community/bob": "^0.17.1",
     "react": "18.2.0",
@@ -33,6 +46,8 @@
     "@react-native/eslint-config": "0.74.83",
     "@react-native/metro-config": "0.74.83",
     "@react-native/typescript-config": "0.74.83",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.6.3",
