@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test_node_18:
+  test_node_latest:
     docker:
       - image: node/default
     steps:
