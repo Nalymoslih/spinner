@@ -14,12 +14,11 @@
   },
   "release": {
     "prepare": [
-       "@semantic-release/changelog",
-       "@semantic-release/npm",
-       {
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
         "path": "@semantic-release/git",
-         "assets": [
-
+        "assets": [
           "dist/**/*.{js,ts}",
           "package.json",
           "package-lock.json",
@@ -29,14 +28,16 @@
       }
     ]
   },
- 
   "dependencies": {
     "@react-native-community/bob": "^0.17.1",
+    "d3-shape": "^3.2.0",
+    "lodash": "^4.17.21",
     "react": "18.2.0",
-    "react-native": "0.74.1"
+    "react-native": "0.74.1",
+    "react-native-confetti-cannon": "^1.5.2",
+    "react-native-modal": "^13.0.1",
+    "react-native-svg": "^15.2.0"
   },
-
-
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
