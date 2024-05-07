@@ -96,6 +96,6 @@
     }
   },
   "publishConfig": {
-    "@NalyMoslih:registry": "https://npm.pkg.github.com"
+    "@Nalymoslih:registry": "https://npm.pkg.github.com"
   }
 }
