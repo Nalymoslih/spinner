@@ -1,5 +1,5 @@
 {
-  "name": "@naly_moslih/spinner-compnents",
+  "name": "@naly_moslih/spinner-components",
   "version": "0.0.1",
   "private": false,
   "scripts": {
@@ -68,7 +68,7 @@
     "node": ">=18"
   },
   "main": "lib/commonjs/index.js",
-  "react-native": "src/index.tsx",
+  "react-native": "src/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
   "files": [
