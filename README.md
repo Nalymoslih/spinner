@@ -3,6 +3,7 @@
 A lightweight and customizable spinner component for React Native applications. This package provides an easy way to add loading indicators to your app.
 
 ![Custom Spinner Example](https://i.postimg.cc/4yLH4C0Y/one.png)
+![Custom Spinner Example](https://i.postimg.cc/L6V8PQVJ/twoo.gif)
 
 
 ## Installation
