@@ -1,7 +1,14 @@
 {
   "name": "@naly_moslih/spinner-react-native",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": false,
+  "keywords": [
+    "react",
+    "spinner",
+    "react-native",
+    "spinner-react-native",
+    "spinner-react"
+  ],
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
