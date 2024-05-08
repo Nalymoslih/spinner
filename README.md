@@ -36,6 +36,4 @@ const App = () => {
 };
 ```
 
-// example code in her
-
 # spinner
