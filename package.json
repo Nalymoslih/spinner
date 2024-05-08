@@ -94,6 +94,11 @@
       "typescript"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nalymoslih/spinner.git"
+  },
+  "homepage": "https://github.com/Nalymoslih/spinner",
   "eslintIgnore": [
     "node_modules/",
     "lib/"

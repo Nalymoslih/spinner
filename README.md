@@ -1,6 +1,6 @@
 # spinner-react-native
 
-A lightweight and customizable spinner component for React Native applications. This package provides an easy way to add loading indicators to your app, improving user experience during data fetching or any other loading operations.
+A lightweight and customizable spinner component for React Native applications. This package provides an easy way to add loading indicators to your app.
 
 ![Custom Spinner Example](https://i.postimg.cc/4yLH4C0Y/one.png)
 
