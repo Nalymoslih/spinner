@@ -9,6 +9,13 @@ A lightweight and customizable spinner component for React Native applications. 
 ## Installation
 
 To install the package, run the following command in your React Native project:
+```
+yarn add d3-shape
+yarn add lodash
+yarn add react-native-confetti-cannon
+yarn add react-native-modal
+yarn add react-native-svg
+```
 
 ```npm
 # using npm
