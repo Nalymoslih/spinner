@@ -11,7 +11,15 @@ import Spinner from './Spinner';
 import Sizing from './Sizing';
 import WinnerModal from './WinnerModal';
 
-const SpinWheel = () => {
+const SpinWheel = ({
+  knobSize,
+  duration = 4000,
+  backgroundColor = 'transparent',
+  knobSource,
+  getWinner,
+  rewards = [],
+  colors = [],
+}) => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [winnerText, setWinnerText] = useState('');
   const [isWinnerModalVisible, setWinnerModalVisible] = useState(false);
@@ -28,10 +36,10 @@ const SpinWheel = () => {
     }, 3500);
   };
 
-  const getWinner = (value, index) => {
-    setWinnerText(value);
-    setWinnerModalVisible(true);
-  };
+  // const getWinner = (value, index) => {
+  //   setWinnerText(value);
+  //   setWinnerModalVisible(true);
+  // };
 
   const closeModal = () => {
     setWinnerModalVisible(false);
@@ -59,32 +67,14 @@ const SpinWheel = () => {
           {true ? (
             <Spinner
               options={{
-                knobSize: 50,
-                duration: 4000,
-                backgroundColor: 'transparent',
-                knobSource: require('./img/spinner-pointer.png'),
+                knobSize: knobSize,
+                duration: duration,
+                backgroundColor: backgroundColor,
+                knobSource: knobSource,
                 getWinner: getWinner,
                 onRef: ref => (spinnerRef.current = ref),
-                rewards: [
-                  'jonathan',
-                  'joseph',
-                  'jotaro',
-                  'josuke',
-                  'giorno',
-                  'jolyne',
-                ],
-                colors: [
-                  '#E07026',
-                  '#E8C22E',
-                  '#ABC937',
-                  '#4F991D',
-                  '#22AFD3',
-                  '#5858D0',
-                  '#7B48C8',
-                  '#D843B9',
-                  '#E23B80',
-                  '#D82B2B',
-                ],
+                rewards: rewards,
+                colors: colors,
               }}
             />
           ) : (

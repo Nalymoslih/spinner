@@ -35,8 +35,8 @@ const App = () => {
                 knobSize: 50,
                 duration: 4000,
                 backgroundColor: 'transparent',
-                knobSource: require('./img/spinner-pointer.png'),
-                getWinner: getWinner,
+                knobSource: require('./image/example.png'),
+                getWinner: (value,index)=>{},
                 onRef: ref => (spinnerRef.current = ref),
                 rewards: [
                   'jonathan',
