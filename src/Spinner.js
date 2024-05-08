@@ -303,7 +303,7 @@ class WheelOfFortune extends Component {
             source={
               this.props.options.knobSource
                 ? this.props.options.knobSource
-                : require('./img/spinner-copy.png')
+                : require('./img/spinner-pointer.png')
             }
             style={{
               width: knobSize,
