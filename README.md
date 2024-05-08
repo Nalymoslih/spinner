@@ -6,16 +6,7 @@ A lightweight and customizable spinner component for React Native applications. 
 ![Custom Spinner Example](https://i.postimg.cc/L6V8PQVJ/twoo.gif)
 
 
-## Installation
 
-To install the package, run the following command in your React Native project:
-```
-yarn add d3-shape
-yarn add lodash
-yarn add react-native-confetti-cannon
-yarn add react-native-modal
-yarn add react-native-svg
-```
 
 ```npm
 # using npm
@@ -25,6 +16,16 @@ npm i @naly_moslih/spinner-react-native
 ```yarn
 # using yarn
 yarn add @naly_moslih/spinner-react-native
+```
+
+
+## Installation
+```
+yarn add d3-shape
+yarn add lodash
+yarn add react-native-confetti-cannon
+yarn add react-native-modal
+yarn add react-native-svg
 ```
 
 ## Usage
