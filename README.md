@@ -19,6 +19,7 @@ yarn add @naly_moslih/spinner-react-native
 ```
 
 
+
 ## Installation
 ```
 yarn add d3-shape
