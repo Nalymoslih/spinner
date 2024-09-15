@@ -1,7 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Button} from 'react-native';
 import Modal from 'react-native-modal';
-import ConfettiCannon from 'react-native-confetti-cannon';
 
 const WinnerModal = ({isVisible, winner, onClose}) => {
   return (
